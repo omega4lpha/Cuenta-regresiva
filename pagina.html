@@ -10,6 +10,9 @@
             background-color: black;
             color: white;
             text-align: center;
+            padding: 0;
+            margin: 0;
+            overflow: hidden; /* Evitar barras de desplazamiento */
         }
         
         h1 {
@@ -29,8 +32,8 @@
         }
 
         .unit {
-            font-size: 2.5vw;
-            margin-top: 1vw;
+            font-size: 10px;
+            margin-top: 5px;
         }
 
         .unit-container {
@@ -39,28 +42,37 @@
             align-items: center;
             justify-content: center;
         }
+        .master {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
-    <h1>Cierre fondos concursables VcM 2024</h1>
-    <div class="contenedor">
-        <div class="unit-container">
-            <div id="dias" class="countdown"></div>
-            <div class="unit">Días</div>
-        </div>
-        <div class="unit-container">
-            <div id="horas" class="countdown"></div>
-            <div class="unit">Horas</div>
-        </div>
-        <div class="unit-container">
-            <div id="minutos" class="countdown"></div>
-            <div class="unit">Minutos</div>
-        </div>
-        <div class="unit-container">
-            <div id="segundos" class="countdown"></div>
-            <div class="unit">Segundos</div>
+    <div class="master">
+        <h1>Cierre fondos concursables VcM 2024</h1>
+        <div class="contenedor">
+            <div class="unit-container">
+                <div id="dias" class="countdown"></div>
+                <div class="unit">Días</div>
+            </div>
+            <div class="unit-container">
+                <div id="horas" class="countdown"></div>
+                <div class="unit">Horas</div>
+            </div>
+            <div class="unit-container">
+                <div id="minutos" class="countdown"></div>
+                <div class="unit">Minutos</div>
+            </div>
+            <div class="unit-container">
+                <div id="segundos" class="countdown"></div>
+                <div class="unit">Segundos</div>
+            </div>
         </div>
     </div>
+    
 
     <script>
         // Función para actualizar el DOM con el tiempo restante
